@@ -27,5 +27,17 @@ export default (state, action) => {
         loading: false,
         users: []
       };
+    case GET_USER:
+      return {
+        ...state,
+        loading: false,
+        user: action.payload
+      };
+    case GET_REPOS:
+      return {
+        ...state,
+        loading: false,
+        repos: action.payload
+      };
   }
 };
